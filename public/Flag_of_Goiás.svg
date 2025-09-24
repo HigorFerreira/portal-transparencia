@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg162"
+   width="560"
+   height="392"
+   version="1.0"
+   sodipodi:docname="Flag_of_Goiás.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="1.647371"
+     inkscape:cx="255.55871"
+     inkscape:cy="115.33529"
+     inkscape:window-width="2544"
+     inkscape:window-height="1307"
+     inkscape:window-x="8"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg162">
+    <sodipodi:guide
+       position="87.73034,525.68433"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-197.39326,525.68433"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     d="M 100.69141,0 A 100.69231,100.69231 0 0 0 0,100.69141 V 294 H 0.19335937 A 100.69231,100.69231 0 0 0 100.69141,392 H 459.30859 A 100.69231,100.69231 0 0 0 559.80664,294 H 560 V 100.69141 A 100.69231,100.69231 0 0 0 459.30859,0 Z"
+     style="fill:#1fa22e;fill-rule:evenodd;stroke-width:7.20039"
+     id="path12" />
+  <path
+     d="M 551.49805,62.388672 H 8.5019531 A 100.69231,100.69231 0 0 0 0,100.69141 v 6.23437 h 560 v -6.23437 a 100.69231,100.69231 0 0 0 -8.50195,-38.302738 z"
+     style="fill:#ffdd00;fill-rule:evenodd;stroke-width:12.1826"
+     id="path15" />
+  <path
+     d="M 203.65039,0 H 100.69141 A 100.69231,100.69231 0 0 0 0,100.69141 v 50.77148 h 203.65039 z"
+     style="fill:#00519e;stroke-width:1.20386"
+     id="path11" />
+  <g
+     id="g895"
+     transform="matrix(0.3393327,0,0,0.3393327,25.884765,20.567809)"
+     fill="#ffffff">
+    <path
+       id="path888"
+       d="m 298.23822,245.84965 -36.87072,-26.90371 -36.87072,26.90371 14.08336,-43.5311 -36.8707,-26.90371 h 45.5747 l 14.08336,-43.5311 14.08336,43.5311 h 45.5747 l -36.8707,26.90371 z" />
+    <path
+       id="path886"
+       transform="matrix(1.04547,0,0,1.04998,0,0.01657823)"
+       d="M 147.02282,339.72136 100,305.55728 52.97718,339.72136 70.938298,284.44272 23.915479,250.27864 H 82.038881 L 100,195 l 17.96112,55.27864 h 58.1234 l -47.02282,34.16408 z" />
+    <path
+       id="path884"
+       transform="matrix(1.04547,0,0,1.04998,0,0.01657823)"
+       d="M 147.02282,164.72136 100,130.55728 52.97718,164.72136 70.938298,109.44272 23.915479,75.27864 H 82.038881 L 100,20 117.96112,75.27864 h 58.1234 l -47.02282,34.16408 z" />
+    <path
+       id="path882"
+       transform="matrix(1.04547,0,0,1.04998,0,0.01657823)"
+       d="M 447.02282,164.72136 400,130.55728 352.97718,164.72136 370.9383,109.44272 323.91548,75.27864 h 58.1234 L 400,20 417.96112,75.27864 h 58.1234 l -47.02282,34.16408 z" />
+    <path
+       id="path160"
+       transform="matrix(1.04547,0,0,1.04998,0,0.01657823)"
+       d="M 447.02282,339.72136 400,305.55728 352.97718,339.72136 370.9383,284.44272 323.91548,250.27864 h 58.1234 L 400,195 l 17.96112,55.27864 h 58.1234 l -47.02282,34.16408 z" />
+  </g>
+  <path
+     d="M 560,151.46289 H 0 V 196 h 560 z"
+     style="fill:#ffdd00;fill-opacity:1"
+     id="path18" />
+  <path
+     d="M 560,240.53711 H 0 v 44.53711 h 560 z"
+     style="fill:#ffdd00;fill-opacity:1"
+     id="path17" />
+  <path
+     d="M 551.47852,329.61133 H 8.5195313 A 100.69231,100.69231 0 0 0 100.69141,392 h 358.61718 a 100.69231,100.69231 0 0 0 92.16993,-62.38867 z"
+     style="stroke-width:17.3485;fill:#ffdd00;fill-opacity:1"
+     id="path16" />
+</svg>
