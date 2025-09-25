@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbopack",
-		"build": "next build --turbopack",
+		"build": "rollup -c",
 		"start": "next start",
 		"lint": "eslint"
 	},
@@ -15,14 +15,19 @@
 		"react-icons": "^5.5.0"
 	},
 	"devDependencies": {
-		"typescript": "^5",
+		"@eslint/eslintrc": "^3",
+		"@rollup/plugin-commonjs": "^28.0.6",
+		"@rollup/plugin-node-resolve": "^16.0.1",
+		"@rollup/plugin-typescript": "^12.1.4",
+		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"@tailwindcss/postcss": "^4",
-		"tailwindcss": "^4",
 		"eslint": "^9",
 		"eslint-config-next": "15.5.4",
-		"@eslint/eslintrc": "^3"
+		"rollup": "^4.52.2",
+		"rollup-plugin-dts": "^6.2.3",
+		"tailwindcss": "^4",
+		"typescript": "^5"
 	}
 }

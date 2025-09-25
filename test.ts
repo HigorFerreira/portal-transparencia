@@ -1,0 +1,1 @@
+console.log(new URL('./package.json', import.meta.url))

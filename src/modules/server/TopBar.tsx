@@ -26,8 +26,8 @@ export async function TopBar(){
         </div> */}
         <div className={[
             'w-full',
-            '[@container_top-bar_(width>=1920px)]:max-w-[1920px]',
-            '[@container_top-bar_(width<1920px)]:px-6',
+            '[@container_top-bar_(width>=1152px)]:max-w-[1024px]',
+            '[@container_top-bar_(width<1152px)]:px-6',
             'h-full flex justify-between items-center',
         ].join(' ')}>
             <div>
