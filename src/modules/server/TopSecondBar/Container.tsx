@@ -7,7 +7,7 @@ export default function Container({ children }: { children?: ReactNode }){
     const [ scrolled, setScrolled ] = useState(false)
 
     const scrollFn = useCallback(() => {
-        if(window.scrollY > 50){
+        if(window.scrollY >= 50){
             setScrolled(true)
         }
         else {
