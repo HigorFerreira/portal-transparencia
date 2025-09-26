@@ -9,13 +9,18 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
+		"hfas-utils": "/Users/hfasantos/Dev/portal-transparencia/dist",
 		"next": "15.5.4",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"react-icons": "^5.5.0"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.28.4",
+		"@babel/preset-react": "^7.27.1",
+		"@babel/preset-typescript": "^7.27.1",
 		"@eslint/eslintrc": "^3",
+		"@rollup/plugin-babel": "^6.0.4",
 		"@rollup/plugin-commonjs": "^28.0.6",
 		"@rollup/plugin-node-resolve": "^16.0.1",
 		"@rollup/plugin-typescript": "^12.1.4",

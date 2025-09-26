@@ -1,11 +1,9 @@
 import { defineConfig } from 'rollup';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
-import { readFileSync } from 'fs';
-
-const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)));
 
 function createConfig(input, output, format, banner = 'client', isDts = false) {
 	if (isDts) {
@@ -26,26 +24,49 @@ function createConfig(input, output, format, banner = 'client', isDts = false) {
 			sourcemap: true,
 			banner: banner ? `'use ${banner}';` : ''
 		},
-		external: ['react', 'react-dom', 'next'],
+		external: (id) => {
+			// Externalize React and its JSX runtime
+			if (id === 'react' || id === 'react/jsx-runtime' || id === 'react/jsx-dev-runtime' || 
+				id === 'react-dom' || id === 'next') {
+				return true;
+			}
+			return !id.startsWith('.') && !id.startsWith('/');
+		},
 		plugins: [
-			// TypeScript plugin with proper JSX configuration
+			resolve({
+				browser: format === 'esm',
+				preferBuiltins: true,
+				extensions: ['.js', '.jsx', '.ts', '.tsx']
+			}),
+			commonjs(),
+			// TypeScript for type checking (but not transpilation)
 			typescript({
 				tsconfig: './tsconfig.build.json',
 				declaration: false,
 				declarationMap: false,
-				// Ensure JSX is properly handled
-				jsx: 'react-jsx',
-				// Explicitly include files
-				include: ['src/**/*.ts', 'src/**/*.tsx'],
-				// Use the appropriate module system
-				module: format === 'esm' ? 'ESNext' : 'CommonJS',
+				noEmit: true, // Don't emit files, just type check
 			}),
-			resolve({
-				browser: format === 'esm',
-				preferBuiltins: true,
-				extensions: ['.js', '.jsx', '.ts', '.tsx'] // Include TS/TSX extensions
+			// Babel for transpilation with automatic JSX runtime
+			babel({
+				babelHelpers: 'bundled',
+				extensions: ['.ts', '.tsx', '.js', '.jsx'],
+				presets: [
+					[
+						'@babel/preset-react',
+						{
+							runtime: 'automatic' // This enables automatic JSX runtime
+						}
+					],
+					[
+						'@babel/preset-typescript',
+						{
+							allExtensions: true,
+							isTSX: true
+						}
+					]
+				],
+				exclude: 'node_modules/**',
 			}),
-			commonjs(),
 		]
 	};
 }

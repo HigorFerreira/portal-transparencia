@@ -1,4 +1,4 @@
-import { CustomIcons } from '@/module_exports/server'
+import { CustomIcons } from './CustomIcons'
 import {
     IoAccessibility as AccessibilityIcon,
     IoContrastSharp as ContrastIcon

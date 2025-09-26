@@ -1,4 +1,4 @@
-import { TopBar } from '@/module_exports/server'
+import { TopBar } from 'hfas-utils/server'
 
 export default function Home() {
 	return <div>
