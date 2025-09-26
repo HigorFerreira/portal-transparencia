@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Top Menu on Scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        /* Container for sticky positioning */
+        .header-container {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+        
+        /* Main header that will resize */
+        .main-header {
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        /* When scrolled, reduce header size */
+        body.scrolled .main-header {
+            padding: 10px 0;
+        }
+        
+        /* Navigation styles */
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            transition: all 0.4s ease;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            transition: all 0.4s ease;
+        }
+        
+        body.scrolled .logo {
+            font-size: 22px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        body.scrolled .nav-menu a {
+            font-size: 16px;
+        }
+        
+        /* Content area */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #182848;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #182848;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <header class="main-header">
+            <nav class="nav-container">
+                <div class="logo">MySite</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main class="content">
+        <section id="home" class="section">
+            <h2>Welcome to Our Website</h2>
+            <p>Scroll down to see the menu resize effect. This is achieved using only CSS with the sticky positioning and transitions.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+        
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>We are a creative team passionate about web design and development. Our mission is to create beautiful and functional websites.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services including web design, development, and digital marketing solutions.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </section>
+        
+        <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            <p>Check out our latest projects and see how we've helped our clients achieve their goals.</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to discuss your project and how we can help bring your ideas to life.</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MySite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // This JavaScript is only for demonstration purposes
+        // The actual effect is achieved with CSS only
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll event listener to toggle scrolled class
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.body.classList.add('scrolled');
+                } else {
+                    document.body.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
