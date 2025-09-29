@@ -3,8 +3,8 @@ import ClientComponent from './ClientTest'
 
 export default function Home() {
 	return <div>
-		<TopBar />
-		<TopSecondBar />
+		{/* <TopBar />
+		<TopSecondBar /> */}
 		<div className='pt-[80px] h-[200vh]'>
 			<ClientComponent />
 		</div>

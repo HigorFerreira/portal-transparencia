@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { createContext, useLayoutEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { useMenuOpen, useMenu } from "@/modules/client/SideMenuProvider";
 
@@ -38,7 +38,7 @@ export default function Component(){
                         'fixed z-[100]',
                         'inset-0 bg-white',
                         '[transition:transform_600ms_ease]',
-                        'sm:hidden',
+                        '[@media(width>=769px)]:hidden',
                     ].join(' ')}
                     style={{
                         transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
