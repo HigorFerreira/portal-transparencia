@@ -30,7 +30,7 @@ export default function Component(){
             <Context value={null}>
                 <div
                     className={[
-                        'fixed z-[100]',
+                        'fixed',
                         'inset-0 bg-white',
                         '[transition:transform_600ms_ease]',
                         '[@media(width>=769px)]:hidden',

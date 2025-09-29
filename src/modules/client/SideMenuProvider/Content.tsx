@@ -10,16 +10,25 @@ export function useMenuContent(){
     return content
 }
 
+/*
+
+[@media(width>=769px)]
+[@media(width>=1920px)]
+
+*/
+
 export default function Content({ children }: PropsWithChildren){
 
     const { close } = useMenu()
 
     const menuContent = useMemo(() => {
         return <div className="w-full h-full bg-white">
-            <div>
-                <div>
-                    Algo aqui
-                    <button onClick={close}>Fechar</button>
+            <div className="h-[100dvh]">
+                <div className="h-full w-[420px] rounded-2xl shadow">
+                    <div>
+                        <p>Algo aqui</p>
+                        <button onClick={close}>Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
