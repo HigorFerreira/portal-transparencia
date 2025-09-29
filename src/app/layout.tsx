@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SideMenuProvider, Menu } from '@/modules/client'
+import { SideMenuProvider, Menu, Content } from '@/modules/client'
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -30,7 +30,9 @@ export default function RootLayout({
 			>
 				<SideMenuProvider>
 					<Menu />
-					{children}
+					<Content>
+						{children}
+					</Content>
 				</SideMenuProvider>
 			</body>
 		</html>
