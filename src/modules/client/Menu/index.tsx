@@ -23,12 +23,6 @@ export default function Component(){
         }
     }, [ ])
 
-    const menuContent = useMemo(() => {
-        return <>
-            <button onClick={close}>Close</button>
-        </>
-    }, [ close ])
-
     return container === null
         ? null
         : createPortal(
@@ -44,7 +38,7 @@ export default function Component(){
                         transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
                     }}
                 >
-                    { menuContent }
+                    
                 </div>
             </Context>,
             container
