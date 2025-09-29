@@ -1,3 +1,4 @@
+'use client';
 import { createContext, Dispatch, PropsWithChildren, SetStateAction, useContext, useState } from 'react'
 
 type ContextType = {
