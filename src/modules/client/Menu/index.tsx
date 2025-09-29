@@ -1,8 +1,11 @@
 'use client';
 
-import { useLayoutEffect, useState } from "react";
+import { createContext, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useMenuOpen, useMenu } from "@/modules/client/SideMenuProvider";
+
+const Context = createContext(null)
+
 
 export default function Component(){
 
@@ -20,21 +23,30 @@ export default function Component(){
         }
     }, [ ])
 
+    const menuContent = useMemo(() => {
+        return <>
+            <button onClick={close}>Close</button>
+        </>
+    }, [ close ])
+
     return container === null
         ? null
         : createPortal(
-            <div
-                className={[
-                    'fixed z-[100]',
-                    'inset-0 bg-white',
-                    '[transition:transform_600ms_ease]',
-                ].join(' ')}
-                style={{
-                    transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
-                }}
-            >
-                <button onClick={close}>Close</button>
-            </div>,
+            <Context value={null}>
+                <div
+                    className={[
+                        'fixed z-[100]',
+                        'inset-0 bg-white',
+                        '[transition:transform_600ms_ease]',
+                        'sm:hidden',
+                    ].join(' ')}
+                    style={{
+                        transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
+                    }}
+                >
+                    { menuContent }
+                </div>
+            </Context>,
             container
         )
 }
