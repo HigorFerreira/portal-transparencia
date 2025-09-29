@@ -1,31 +1,10 @@
 'use client';
 
-import { PropsWithChildren, useEffect, useLayoutEffect, useState } from "react";
+import { PropsWithChildren, useLayoutEffect, useState } from "react";
 import { useMenuOpen, useMenuContent } from "@/modules/client/SideMenuProvider/hooks";
 
 
-function Menu(){
-
-    const isOpen = useMenuOpen()
-    const content = useMenuContent()
-
-    return <div
-        className={[
-            '[@media(width>=1920px)]:hidden',
-            '[transition:width_600ms_ease]',
-            'overflow-hidden',
-            isOpen ? 'w-[clamp(200px,39.06vw,500px)]' : 'w-[0px]'
-        ].join(' ')}
-    >
-        { content }
-    </div>
-}
-
-function Menu2(){
-
-    const isOpen = useMenuOpen()
-    const content = useMenuContent()
-
+function useMenuTranslateY(){
     const [ translateY, setTranslateY ] = useState(0)
 
     const onScroll = () => {
@@ -38,6 +17,37 @@ function Menu2(){
         }
         return () => document.removeEventListener('scroll', onScroll)
     }, [])
+
+    return translateY
+}
+
+function Menu(){
+
+    const isOpen = useMenuOpen()
+    const content = useMenuContent()
+
+    const translateY = useMenuTranslateY()
+
+    return <div
+        className={[
+            '[@media(width>=1920px)]:hidden',
+            '[transition:width_600ms_ease]',
+            'overflow-hidden',
+            isOpen ? 'w-[clamp(200px,39.06vw,500px)]' : 'w-[0px]'
+        ].join(' ')}
+    >
+        <div className="w-full h-full" style={{ transform: `translateY(${translateY}px)` }}>
+            { content }
+        </div>
+    </div>
+}
+
+function Menu2(){
+
+    const isOpen = useMenuOpen()
+    const content = useMenuContent()
+
+    const translateY = useMenuTranslateY()
 
     return <div
         className={[
