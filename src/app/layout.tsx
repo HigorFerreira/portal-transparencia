@@ -32,7 +32,6 @@ export default function RootLayout({
 				<SideMenuProvider>
 					<TopBar />
 					<TopSecondBar />
-					<div className="h-[80px]" />
 					<Menu />
 					<Content>
 						{children}

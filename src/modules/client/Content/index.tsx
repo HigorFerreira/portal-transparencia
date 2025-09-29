@@ -30,8 +30,7 @@ function Menu2(){
         className={[
             '[@media(width<1920px)]:hidden',
             '[transition:transform_600ms_ease]',
-            'absolute h-[calc(100dvh-80px-45px-40px)] inset-0 bg-amber-300 [&_*]:!bg-transparent',
-            // isOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'
+            'absolute inset-0',
         ].join(' ')}
         style={{
             transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
@@ -42,7 +41,7 @@ function Menu2(){
 }
 
 export default function Content({ children }: PropsWithChildren){
-    return <div className="grid grid-cols-[auto_1fr] [@media(width>=1920px)]:grid-cols-[1fr_1024px_1fr]">
+    return <div className="grid grid-cols-[auto_1fr] mt-[calc(80px/2)] [@media(width>=1920px)]:grid-cols-[1fr_1024px_1fr]">
         <Menu />
         <div className="relative overflow-hidden [@media(width<1920px)]:hidden">
             <Menu2 />

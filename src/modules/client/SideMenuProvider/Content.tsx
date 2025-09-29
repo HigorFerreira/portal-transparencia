@@ -22,7 +22,7 @@ export default function Content({ children }: PropsWithChildren){
     const { close } = useMenu()
 
     const menuContent = useMemo(() => {
-        return <div className="w-full h-full bg-white">
+        return <div className="w-full h-full bg-white [@media(width>=1920px)]:bg-transparent">
             <div className="h-[100dvh]">
                 <div className="h-full w-[420px] rounded-2xl shadow">
                     <div>
