@@ -48,6 +48,7 @@ export default function Container({ children }: { children?: ReactNode }){
             "@container/top-second-bar",
             "sticky top-[40px] left-0 right-0 shadow flex items-center justify-center bg-white",
             "transition-all",
+            "z-1000",
             scrolled ? "scrolled" : "",
             scrolled ? "h-[45px]" : "h-[80px]"
         ].join(" ")}

@@ -30,7 +30,6 @@ function Menu2(){
         className={[
             '[@media(width<1920px)]:hidden',
             '[transition:transform_600ms_ease]',
-            'absolute inset-0',
         ].join(' ')}
         style={{
             transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'

@@ -22,17 +22,10 @@ export default function Content({ children }: PropsWithChildren){
     const { close } = useMenu()
 
     const menuContent = useMemo(() => {
-        return <div className="w-full h-full bg-white [@media(width>=1920px)]:bg-transparent">
-            <div className="h-[100dvh]">
-                <div className="h-full w-[420px] rounded-2xl shadow">
-                    <div>
-                        <p>Algo aqui</p>
-                        <button onClick={close}>Fechar</button>
-                    </div>
-                </div>
-            </div>
+        return <div className="h-full w-full">
+            Algo aqui
         </div>
-    }, [])
+    }, [ close ])
 
     return <Context value={{ content: menuContent }}>
         { children }

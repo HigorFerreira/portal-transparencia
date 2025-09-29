@@ -8,7 +8,7 @@ export async function TopBar(){
 
     const { GoiasFlag } = await CustomIcons()
 
-    return <div className="@container/top-bar flex justify-center fixed top-0 right-0 left-0 h-[40px] bg-blue-950">
+    return <div className="@container/top-bar flex justify-center fixed top-0 right-0 left-0 h-[40px] bg-blue-950 z-1000">
         <div className={[
             'w-full',
             '[@container_top-bar_(width>=1152px)]:max-w-[1024px]',
