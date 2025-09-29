@@ -19,7 +19,7 @@ export default function Component(){
         if(window !== undefined){
             const body = document.body
             const div = document.createElement('div')
-            body.insertAdjacentElement('beforebegin', div)
+            body.insertAdjacentElement('afterbegin', div)
             setContainer(div)
         }
     }, [ ])
@@ -30,8 +30,9 @@ export default function Component(){
             <Context value={null}>
                 <div
                     className={[
-                        'fixed z-1001',
-                        'inset-0 bg-white',
+                        'fixed top-0 right-0 left-0 h-[100dvh]',
+                        'z-1001',
+                        'bg-white',
                         '[transition:transform_600ms_ease]',
                         '[@media(width>=769px)]:hidden',
                     ].join(' ')}
