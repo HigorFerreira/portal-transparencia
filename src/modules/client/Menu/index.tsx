@@ -1,8 +1,8 @@
 'use client';
 
-import { createContext, useLayoutEffect, useMemo, useState } from "react";
+import { createContext, useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { useMenuOpen, useMenu } from "@/modules/client/SideMenuProvider";
+import { useMenuOpen, useMenuContent } from "@/modules/client/SideMenuProvider/hooks";
 
 const Context = createContext(null)
 
@@ -11,8 +11,9 @@ export default function Component(){
 
 
     const isOpen = useMenuOpen()
-    const { close } = useMenu()
     const [ container, setContainer ] = useState<HTMLDivElement | null>(null)
+
+    const content = useMenuContent()
 
     useLayoutEffect(() => {
         if(window !== undefined){
@@ -38,7 +39,7 @@ export default function Component(){
                         transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
                     }}
                 >
-                    
+                    { content }
                 </div>
             </Context>,
             container

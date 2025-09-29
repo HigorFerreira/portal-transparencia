@@ -1,4 +1,3 @@
-import { TopBar, TopSecondBar, } from '@/module_exports/server'
 import ClientComponent from './ClientTest'
 
 export default function Home() {

@@ -1,5 +1,6 @@
 'use client';
 import { createContext, Dispatch, PropsWithChildren, SetStateAction, useContext, useState } from 'react'
+import Content from './Content';
 
 type ContextType = {
     open: boolean
@@ -44,6 +45,8 @@ export function SideMenuProvider({ children }: PropsWithChildren){
 
 
     return <Context value={{ open, setOpen }}>
-        { children }
+        <Content>
+            { children }
+        </Content>
     </Context>
 }
