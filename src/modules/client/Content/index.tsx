@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useLayoutEffect, useState } from "react";
 import { useMenuOpen, useMenuContent } from "@/modules/client/SideMenuProvider/hooks";
 
 
@@ -26,16 +26,32 @@ function Menu2(){
     const isOpen = useMenuOpen()
     const content = useMenuContent()
 
+    const [ translateY, setTranslateY ] = useState(0)
+
+    const onScroll = () => {
+        setTranslateY(window.scrollY)
+    }
+
+    useLayoutEffect(() => {
+        if(window !== undefined){
+            document.addEventListener('scroll', onScroll)
+        }
+        return () => document.removeEventListener('scroll', onScroll)
+    }, [])
+
     return <div
         className={[
             '[@media(width<1920px)]:hidden',
             '[transition:transform_600ms_ease]',
+            'absolute inset-0',
         ].join(' ')}
         style={{
             transform: isOpen ? 'translateX(0)' : 'translateX(-100%)'
         }}
     >
-        { content }
+        <div className="w-full h-full" style={{ transform: `translateY(${translateY}px)` }}>
+            { content }
+        </div>
     </div>
 }
 
