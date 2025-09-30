@@ -23,15 +23,14 @@ export default function Content({ children }: PropsWithChildren){
     
 
     const menuContent = useMemo(() => {
-        return <div className="fixed top-0 right-0 left-0 h-[100dvh] overflow-hidden grid grid-rows-[1fr_auto]">
-            <div className="overflow-hidden">
-                <div className="overflow-auto">
-
-                </div>
-            </div>
-            <div>
-                <button onClick={close}>Fechar</button>
-            </div>
+        return <div className="h-[calc(100dvh)] [@media(width>=769px)]:h-[calc(100dvh-80px-40px)] flex flex-col justify-between">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minima deserunt earum ipsum! Dolore rem illum quidem eos rerum ipsum et, nisi iste suscipit temporibus! Ipsum ex commodi repellat quibusdam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae totam nemo saepe.
+            </p>
+            <button onClick={close}>Fechar</button>
         </div>
     }, [ close ])
 

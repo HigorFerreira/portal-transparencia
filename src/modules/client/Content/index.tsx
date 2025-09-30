@@ -77,7 +77,7 @@ export default function Content({ children }: PropsWithChildren){
 
     return <div className="grid grid-cols-[auto_1fr] mt-[calc(80px/2)] [@media(width>=1920px)]:grid-cols-[1fr_1024px_1fr]">
         <Menu />
-        <div className="relative overflow-hidden [@media(width<1920px)]:hidden" onTransitionEnd={() => console.log('Transition end')}>
+        <div className="relative overflow-hidden [@media(width<1920px)]:hidden">
             <Menu2 />
         </div>
         <div
