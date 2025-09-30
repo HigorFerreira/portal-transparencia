@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren, useLayoutEffect, useState } from "react";
+import { PropsWithChildren, useLayoutEffect, useMemo, useState } from "react";
 import { useMenuOpen, useMenuContent } from "@/modules/client/SideMenuProvider/hooks";
 
 
@@ -66,13 +66,28 @@ function Menu2(){
 }
 
 export default function Content({ children }: PropsWithChildren){
+
+    const _isOpen = useMenuOpen()
+    const isMobileOpen = useMemo(() => {
+        if(_isOpen && window.innerWidth < 770){
+            return true
+        }
+        return false
+    }, [ _isOpen ])
+
     return <div className="grid grid-cols-[auto_1fr] mt-[calc(80px/2)] [@media(width>=1920px)]:grid-cols-[1fr_1024px_1fr]">
         <Menu />
-        <div className="relative overflow-hidden [@media(width<1920px)]:hidden">
+        <div className="relative overflow-hidden [@media(width<1920px)]:hidden" onTransitionEnd={() => console.log('Transition end')}>
             <Menu2 />
         </div>
-        <div>
-            { children }
+        <div
+            className={[
+                isMobileOpen ? 'h-[calc(100dvh-80px-40px)] overflow-hidden' : ''
+            ].join(' ')}
+        >
+            <div>
+                { children }
+            </div>
         </div>
         <div className="relative overflow-hidden [@media(width<1920px)]:hidden">
 
