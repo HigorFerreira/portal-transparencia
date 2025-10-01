@@ -1,27 +1,16 @@
 'use client';
-
-import { createContext, PropsWithChildren, useMemo, JSX, useContext } from "react";
-import { useMenu } from './hooks'
-
-const Context = createContext<{ content: JSX.Element }>({ content: <></> })
+import { PropsWithChildren, useMemo, useContext } from "react";
+import { useMenu } from '../hooks'
+import { ContentContext as Context } from '../providers'
 
 export function useMenuContent(){
     const { content } = useContext(Context)
     return content
 }
 
-/*
-
-[@media(width>=769px)]
-[@media(width>=1920px)]
-
-*/
-
 export default function Content({ children }: PropsWithChildren){
-
     const { close } = useMenu()
     
-
     const menuContent = useMemo(() => {
         return <div className="h-[calc(100dvh)] [@media(width>=769px)]:h-[calc(100dvh-80px-40px)] flex flex-col justify-between">
             <p>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SideMenuProvider, Menu, Content } from '@/modules/client'
-import { TopBar, TopSecondBar, } from '@/module_exports/server'
 import "@/app/globals.css";
+
+import SideMenuProvider from '@/components/SideMenuProvider'
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -30,12 +30,7 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<SideMenuProvider>
-					<TopBar />
-					<TopSecondBar />
-					<Menu />
-					<Content>
-						{children}
-					</Content>
+					{ children }
 				</SideMenuProvider>
 			</body>
 		</html>
