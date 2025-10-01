@@ -1,6 +1,6 @@
 import TJGOLogo from '../TJGOLogo'
-import { IoMenuOutline as MenuIcon } from "react-icons/io5";
-import Container from './Container';
+import MenuButtonSwitcher from './MenuButtonSwitcher'
+import Container from './Container'
 
 export async function TopSecondBar(){
     return <Container>
@@ -22,9 +22,7 @@ export async function TopSecondBar(){
                 '[.scrolled_&_#g315]:translate-x-[calc(5px)]',
             ].join(' ')}
         >
-            <div>
-                <MenuIcon />
-            </div>
+            <MenuButtonSwitcher />
             <div className='[&_svg]:h-[60px]'>
                 <TJGOLogo />
             </div>
