@@ -10,7 +10,7 @@ function ContainerBox({ children, classColor, classHeight }: { children?: React.
 }
 
 export default function Home() {
-	return <div className="snap-y snap-proximity">
+	return <div className="snap-y snap-mandatory">
 		<ContainerBox>
 			<div className="w-full h-full flex justify-center items-center">
 				<div className="w-full flex justify-between gap-6">
