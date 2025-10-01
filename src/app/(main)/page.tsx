@@ -1,13 +1,25 @@
 import React from "react"
 
-/* eslint-disable @next/next/no-img-element */
+import { FaBalanceScale as BalanceIcon } from "react-icons/fa"
+import { FaLaptop as NotebookIcon } from "react-icons/fa"
+import { SlDocs as DocIcon } from "react-icons/sl"
+
 
 function ContainerBox({ children, classColor, classHeight }: { children?: React.ReactNode; classColor?: string; classHeight?: string }){
 	return <div className={`w-full ${classHeight??'h-[calc(100dvh-30px-40px-80px)]'} snap-center`}>
 		<div className={`absolute left-0 ${classColor??'bg-gray-400/10'} w-full ${classHeight??'h-[calc(100dvh-30px-40px-80px)]'}`}></div>
+		<div className="relative w-full h-full">
+			{ children }
+		</div>
+	</div>
+}
+
+function FrontButton({ children }: { children?: React.ReactNode }){
+	return <div className="uppercase overflow-hidden font-bold flex gap-2 items-center p-2 cursor-pointer rounded-2xl border-2">
 		{ children }
 	</div>
 }
+
 
 export default function Home() {
 	return <div className="snap-y snap-mandatory">
@@ -24,8 +36,9 @@ export default function Home() {
 					</div>
 					<div className="[grid-area:c]">
 						<div className="[&>*:not(:last-child)]:mb-2">
+						{/* https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm */}
 							<p>
-								A Lei de Acesso à Informação - Lei nº 12.527, sancionada pela Presidência da República em 18 de novembro de 2011, garante ao cidadão brasileiro o acesso às informações públicas sob guarda de órgão e entidades públicas; facilitando, dessa forma, uma maior participação popular no acompanhamento e fiscalização das ações governamentais.
+								A Lei de Acesso à Informação - <a href=""></a>, sancionada pela Presidência da República em 18 de novembro de 2011, garante ao cidadão brasileiro o acesso às informações públicas sob guarda de órgão e entidades públicas; facilitando, dessa forma, uma maior participação popular no acompanhamento e fiscalização das ações governamentais.
 							</p>
 
 							<p>
@@ -42,7 +55,32 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="[grid-area:f]">
-						m1uuun2jn
+						<div className="flex justify-evenly">
+							<FrontButton>
+								<>
+									<BalanceIcon size={30} />
+									<span>
+										Projudi
+									</span>
+								</>
+							</FrontButton>
+							<FrontButton>
+								<>
+									<NotebookIcon size={30} />
+									<span>
+										Balcão Virtual
+									</span>
+								</>
+							</FrontButton>
+							{/* <FrontButton>
+								<>
+									<DocIcon size={30} />
+									<span>
+										1 Atendimento/Juizados Especiais
+									</span>
+								</>
+							</FrontButton> */}
+						</div>
 					</div>
 					<div className={[
 						"[grid-area:img]",
@@ -55,7 +93,9 @@ export default function Home() {
 			</div>
 		</ContainerBox>
 		<ContainerBox classHeight="h-[100dvh]" classColor="bg-white">
-			
+			<div className="my-4">
+				<h1 className="font-bold text-[40px] mb-4 text-[#487eb0]">Acesso Rápido</h1>
+			</div>
 		</ContainerBox>
 		<ContainerBox classHeight="h-[100dvh]">
 			
