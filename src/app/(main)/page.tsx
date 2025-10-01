@@ -1,5 +1,7 @@
 import React from "react"
 
+import TopBar from '@/components/TopBar'
+
 export default function Home() {
 	return <div
 		className={[
@@ -10,7 +12,7 @@ export default function Home() {
 		].join(" ")}
 	>
 		<header className="[grid-area:h1]">
-			HEADER 1
+			<TopBar />
 		</header>
 		<header className="[grid-area:h2]">
 			HEADER 2
@@ -23,7 +25,7 @@ export default function Home() {
 		</aside>
 		<main className="[grid-area:c] overflow-hidden">
 			<div className="w-full h-full overflow-auto">
-				<div className="h-[200vh]">
+				<div className="flex justify-center items-center h-[200vh]">
 					CONTENT
 				</div>
 			</div>
