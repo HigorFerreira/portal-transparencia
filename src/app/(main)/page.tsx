@@ -1,6 +1,8 @@
 import React from "react"
 
 import TopBar from '@/components/TopBar'
+import TopSecondBar from '@/components/TopSecondBar'
+
 
 export default function Home() {
 	return <div
@@ -15,13 +17,17 @@ export default function Home() {
 			<TopBar />
 		</header>
 		<header className="[grid-area:h2]">
-			HEADER 2
+			<TopSecondBar />
 		</header>
 		<aside className="[grid-area:mm]">
-			MAIN MENU
+			<div className="min-w-[250px] h-full p-6 shadow">
+				MAIN MENU
+			</div>
 		</aside>
 		<aside className="[grid-area:sm]">
-			SUBMENU
+			<div className="min-w-[150px] h-full p-6 shadow">
+				SUBMENU
+			</div>
 		</aside>
 		<main className="[grid-area:c] overflow-hidden">
 			<div className="w-full h-full overflow-auto">
@@ -31,7 +37,10 @@ export default function Home() {
 			</div>
 		</main>
 		<footer className="[grid-area:f]">
-			FOOTER
+		{/* bg-blue-950 */}
+			<div className="w-full h-full bg-blue-950">
+				FOOTER
+			</div>
 		</footer>
 	</div>
 }

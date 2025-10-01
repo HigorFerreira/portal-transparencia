@@ -1,31 +1,22 @@
 import TJGOLogo from '../TJGOLogo'
-import MenuButtonSwitcher from './MenuButtonSwitcher'
-import Container from './Container'
+// import { TbLayoutSidebarLeftCollapseFilled as CollapseIcon } from "react-icons/tb"
+import { TbLayoutSidebarLeftCollapse as CollapseIcon } from "react-icons/tb"
+import { TbLayoutSidebarRightCollapse as ExpandIcon } from "react-icons/tb";
 
 export default async function TopSecondBar(){
-    return <Container>
-        <div
-            className={[
-                'flex justify-between items-center w-full px-6',
-                '[@container_top-second-bar_(width>=600px)]:justify-center',
-                '[@container_top-second-bar_(width>=600px)]:gap-6',
-
-                '[&_#g281]:transition-all',
-                '[&_#g315]:transition-all',
-
-                '[.scrolled_&_#g281]:scale-50',
-                '[.scrolled_&_#g281]:translate-y-[calc(50%-29.8px/2)]',
-                '[.scrolled_&_#g281]:translate-x-[calc(22.04px*1.5)]',
-
-                '[.scrolled_&_#g315]:scale-[0.9]',
-                '[.scrolled_&_#g315]:translate-y-[calc(2px)]',
-                '[.scrolled_&_#g315]:translate-x-[calc(5px)]',
-            ].join(' ')}
-        >
-            <MenuButtonSwitcher />
-            <div className='[&_svg]:h-[60px]'>
-                <TJGOLogo />
+    return <div className='relative w-full h-full flex justify-center items-center p-4 shadow'>
+        <div className='absolute left-[calc(var(--spacing)*4)]'>
+            <div className='flex gap-1 text-gray-500'>
+                <div className='cursor-pointer' title='Fechar menu'>
+                    <CollapseIcon size={30} />
+                </div>
+                <div className='cursor-pointer' title='Abrir menu'>
+                    <ExpandIcon size={30} />
+                </div>
             </div>
         </div>
-    </Container>
+        <div className='self-center [&_svg]:h-[60px]'>
+            <TJGOLogo />
+        </div>
+    </div>
 }
