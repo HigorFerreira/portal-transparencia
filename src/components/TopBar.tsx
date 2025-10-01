@@ -4,7 +4,7 @@ import {
     IoContrastSharp as ContrastIcon
 } from "react-icons/io5"
 
-export async function TopBar(){
+export default async function TopBar(){
 
     const { GoiasFlag } = await CustomIcons()
 

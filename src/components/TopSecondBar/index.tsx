@@ -2,7 +2,7 @@ import TJGOLogo from '../TJGOLogo'
 import MenuButtonSwitcher from './MenuButtonSwitcher'
 import Container from './Container'
 
-export async function TopSecondBar(){
+export default async function TopSecondBar(){
     return <Container>
         <div
             className={[
