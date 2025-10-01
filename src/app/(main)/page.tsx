@@ -5,7 +5,7 @@ export default function Home() {
 		className={[
 			"w-[100vw] h-[100dvh] grid",
 			"grid-cols-[auto_auto_1fr] grid-rows-[40px_auto_1fr]",
-			"[grid-template-areas:'h1_h1_h1'_'mm_sm_h2'_'mm_sm_c']",
+			"[grid-template-areas:'h1_h1_h1'_'mm_sm_h2'_'mm_sm_c'_'f_f_f']",
 			"[&>*]:flex [&>*]:justify-center [&>*]:items-center",
 		].join(" ")}
 	>
@@ -21,8 +21,15 @@ export default function Home() {
 		<aside className="[grid-area:sm]">
 			SUBMENU
 		</aside>
-		<main className="[grid-area:c]">
-			CONTENT
+		<main className="[grid-area:c] overflow-hidden">
+			<div className="w-full h-full overflow-auto">
+				<div className="h-[200vh]">
+					CONTENT
+				</div>
+			</div>
 		</main>
+		<footer className="[grid-area:f]">
+			FOOTER
+		</footer>
 	</div>
 }
