@@ -4,6 +4,8 @@ import TopBar from '@/components/TopBar'
 import TopSecondBar from '@/components/TopSecondBar'
 import ContentTest from './ContentTest'
 
+import SubMenu from '@/app/(main)/SubMenu'
+
 
 export default function Home() {
 	return <div
@@ -26,9 +28,7 @@ export default function Home() {
 			</div>
 		</aside>
 		<aside className="[grid-area:sm]">
-			<div className="min-w-[250px] h-full p-6 shadow">
-				SUBMENU
-			</div>
+			<SubMenu />
 		</aside>
 		<main className="[grid-area:c] overflow-hidden">
 			<ContentTest />
