@@ -2,6 +2,7 @@ import React from "react"
 
 import TopBar from '@/components/TopBar'
 import TopSecondBar from '@/components/TopSecondBar'
+import ContentTest from './ContentTest'
 
 
 export default function Home() {
@@ -25,16 +26,12 @@ export default function Home() {
 			</div>
 		</aside>
 		<aside className="[grid-area:sm]">
-			<div className="min-w-[150px] h-full p-6 shadow">
+			<div className="min-w-[250px] h-full p-6 shadow">
 				SUBMENU
 			</div>
 		</aside>
 		<main className="[grid-area:c] overflow-hidden">
-			<div className="w-full h-full overflow-auto">
-				<div className="flex justify-center items-center h-[200vh]">
-					CONTENT
-				</div>
-			</div>
+			<ContentTest />
 		</main>
 		<footer className="[grid-area:f]">
 		{/* bg-blue-950 */}
