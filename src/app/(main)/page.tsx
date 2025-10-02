@@ -5,6 +5,7 @@ import TopSecondBar from '@/components/TopSecondBar'
 import ContentTest from './ContentTest'
 
 import SubMenu from '@/app/(main)/SubMenu'
+import Menu from '@/app/(main)/Menu'
 
 
 export default function Home() {
@@ -23,9 +24,7 @@ export default function Home() {
 			<TopSecondBar />
 		</header>
 		<aside className="[grid-area:mm]">
-			<div className="min-w-[250px] h-full p-6 shadow">
-				MAIN MENU
-			</div>
+			<Menu />
 		</aside>
 		<aside className="[grid-area:sm]">
 			<SubMenu />
