@@ -29,7 +29,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<SideMenuProvider menuInitial="open" submenuInitial="open">
+				<SideMenuProvider menuInitial="open" submenuInitial="close">
 					{ children }
 				</SideMenuProvider>
 			</body>
