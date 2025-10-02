@@ -33,20 +33,32 @@ export default function OpenCloseMenus(){
 
     return <div className='absolute left-[calc(var(--spacing)*4)]'>
         <div className='flex gap-1 text-gray-500'>
-            <div
-                onClick={handleClose}
-                className='cursor-pointer'
-                title='Fechar menu'
-            >
-                <CollapseIcon size={30} />
-            </div>
-            <div
-                onClick={handleOpen}
-                className='cursor-pointer'
-                title='Abrir menu'
-            >
-                <ExpandIcon size={30} />
-            </div>
+            {
+                (isMenuOpen || isSubMenuOpen) && <div
+                    onClick={handleClose}
+                    className='cursor-pointer'
+                    title={
+                        isMenuOpen && isSubMenuOpen
+                            ? 'Fechar sub menu'
+                            : 'Fechar menu'
+                    }
+                >
+                    <CollapseIcon size={30} />
+                </div>
+            }
+            {
+                !(isMenuOpen && isSubMenuOpen) && <div
+                    onClick={handleOpen}
+                    className='cursor-pointer'
+                    title={
+                        isMenuOpen && !isSubMenuOpen
+                            ? 'Abrir sub menu'
+                            : 'Abrir menu'
+                    }
+                >
+                    <ExpandIcon size={30} />
+                </div>
+            }
         </div>
     </div>
 }
