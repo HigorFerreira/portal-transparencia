@@ -33,10 +33,10 @@ export default function Home() {
 			<div className="w-full h-full flex justify-center items-center">
 				<div className="max-w-[920px] h-[calc(100%-10	0px)] gap-x-4 grid grid-rows-[repeat(3,auto)_1fr_auto] grid-cols-[1fr_auto]">
 					<div>
-						<h1>Portal da Transparência</h1>
+						<h1 className="font-bold text-[40px] mb-4 text-[#487eb0]">Portal da Transparência</h1>
 					</div>
 					<div>
-						<input type="text" />
+						<input className="w-full my-4" type="text" />
 					</div>
 					<div className="[&>*:not(:last-child)]:mb-2">
 						<p>

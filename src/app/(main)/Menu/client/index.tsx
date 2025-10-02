@@ -11,13 +11,13 @@ export function ClientContainer(
         className={[
             "relative h-full shadow overflow-hidden",
             "[transition:width_600ms_ease]",
-            isOpen ? "w-[250px]" : "w-0"
+            isOpen ? "w-[400px]" : "w-0"
         ].join(" ")}
     >
         <div
             className={[
                 "absolute right-0 h-full",
-                isOpen ? "w-[250px]" : "w-0"
+                isOpen ? "w-[400px]" : "w-0"
             ].join(" ")}
         >
             { children }
