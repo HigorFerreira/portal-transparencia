@@ -22,6 +22,15 @@ export default function OpenCloseMenus(){
         }
     },  [ isMenuOpen, isSubMenuOpen, closeSubMenu, closeMenu ])
 
+    const handleOpen =  useCallback(() => {
+        if(!isMenuOpen && !isSubMenuOpen){
+            openMenu()
+        }
+        if(isMenuOpen && !isSubMenuOpen){
+            openSubMenu()
+        }
+    },  [ isMenuOpen, isSubMenuOpen, openMenu, openSubMenu ])
+
     return <div className='absolute left-[calc(var(--spacing)*4)]'>
         <div className='flex gap-1 text-gray-500'>
             <div
@@ -32,6 +41,7 @@ export default function OpenCloseMenus(){
                 <CollapseIcon size={30} />
             </div>
             <div
+                onClick={handleOpen}
                 className='cursor-pointer'
                 title='Abrir menu'
             >
