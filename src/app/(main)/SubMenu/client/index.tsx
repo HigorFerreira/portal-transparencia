@@ -10,7 +10,7 @@ export function ClientContainer(
     return <div
         className={[
             "relative h-full shadow overflow-hidden",
-            "[transition:width_450ms_ease]",
+            "[transition:width_600ms_ease]",
             isOpen ? "w-[250px]" : "w-0"
         ].join(" ")}
     >
