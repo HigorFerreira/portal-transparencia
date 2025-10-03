@@ -9,6 +9,7 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
+		"antd": "^5.27.4",
 		"hfas-utils": "/Users/hfasantos/Dev/portal-transparencia/dist",
 		"next": "15.5.4",
 		"react": "19.1.0",
