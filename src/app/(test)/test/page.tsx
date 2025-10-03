@@ -290,17 +290,37 @@ function MenuButtonContainer({ children, size }: PropsWithChildren<{ size?: Menu
     </div>
 }
 
-function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: string; open?: boolean }>){
+function useHeightMeasure(){
+    const interval = useRef<NodeJS.Timeout>(null)
+    const ref = useRef<HTMLDivElement>(null)
+    const [ counter, setCounter ] = useState(0)
 
-    const childContainer = useRef<HTMLDivElement>(null)
-    const [ hover, setHover ] = useState(false)
+    useEffect(() => {
+        interval.current = setInterval(() => {
+            setCounter(prev => prev+1)
+        }, 90);
+        return () => clearInterval(interval.current??0)
+    }, [ interval ])
 
-    const childHeight = useMemo(() => {
-        if(childContainer.current){
-            return childContainer.current.getBoundingClientRect().height
+    useEffect(() => {
+        if(counter > 7) clearInterval(interval.current??0)
+    }, [ counter ])
+
+    const height = useMemo(() => {
+        console.log({ counter })
+        if(ref.current){
+            return ref.current.getBoundingClientRect().height
         }
         return 0
-    }, [ childContainer ])
+    }, [ ref, counter ])
+
+    return [ ref, height ] as const
+}
+
+function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: string; open?: boolean }>){
+
+    const [ hover, setHover ] = useState(false)
+    const [ childContainer, childHeight ] = useHeightMeasure()
 
     return <div
         className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
