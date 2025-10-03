@@ -322,32 +322,35 @@ function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: str
     const [ hover, setHover ] = useState(false)
     const [ childContainer, childHeight ] = useHeightMeasure()
 
-    return <div
-        className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
-        onMouseEnter={setHover.bind(null, true)}
-        onMouseLeave={setHover.bind(null, false)}
-    >
-        <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) cursor-pointer flex items-center justify-between">
-            <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
-            <span>{ label }</span>
-            {
-                hover
-                    ? <MinusIcon size={30} />
-                    : <PlusIcon size={30} />
-            }
-            <div
-                className={[
-                    "absolute left-0 right-0 top-[calc(100%)] overflow-hidden h-0",
-                    "[transition:height_300ms_ease]",
-                ].join(" ")}
-                style={{ height: open || hover ? childHeight : undefined }}
-            >
-                <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 pl-3 pt-[5px]">
-                    { children }
+    return <>
+        <div
+            className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
+            onMouseEnter={setHover.bind(null, true)}
+            onMouseLeave={setHover.bind(null, false)}
+        >
+            <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) cursor-pointer flex items-center justify-between">
+                <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
+                <span>{ label }</span>
+                {
+                    hover
+                        ? <MinusIcon size={30} />
+                        : <PlusIcon size={30} />
+                }
+                <div
+                    className={[
+                        "absolute left-0 right-0 top-[calc(100%)] overflow-hidden h-0",
+                        "[transition:height_300ms_ease]",
+                    ].join(" ")}
+                    style={{ height: open || hover ? childHeight : undefined }}
+                >
+                    <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 pl-3 pt-[5px]">
+                        { children }
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div className="[transition:height_300ms_ease]" style={{ height: open || hover ? childHeight : 0 }} />
+    </>
 }
 
 export default function Page(){
@@ -400,13 +403,20 @@ export default function Page(){
                 </div>
             </MenuTopPanel>
             <div>
-                <MenuAccordion label="lorem ipsum">
-                    <div>
-                        <p>SOMETHING IS HAPPENING THERE</p>
-                        <p>Something</p>
-                        <p>Hello</p>
-                    </div>
-                </MenuAccordion>
+                <div className="pl-10">
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>SOMETHING IS HAPPENING THERE</p>
+                            <p>Something</p>
+                            <p>Hello</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                </div>
             </div>
         </div>
     </div>
