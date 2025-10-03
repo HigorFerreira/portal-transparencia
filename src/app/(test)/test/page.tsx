@@ -294,6 +294,21 @@ function useHeightMeasure(){
     const interval = useRef<NodeJS.Timeout>(null)
     const ref = useRef<HTMLDivElement>(null)
     const [ counter, setCounter ] = useState(0)
+    const [ height, setHeight ] = useState(0)
+
+    useEffect(() => {
+        if (!ref.current) return;
+    
+        const observer = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                setHeight(entry.contentRect.height);
+            }
+        });
+    
+        observer.observe(ref.current);
+        
+        return () => observer.disconnect();
+      }, []);
 
     useEffect(() => {
         interval.current = setInterval(() => {
@@ -306,12 +321,14 @@ function useHeightMeasure(){
         if(counter > 7) clearInterval(interval.current??0)
     }, [ counter ])
 
-    const height = useMemo(() => {
-        console.log({ counter })
-        if(ref.current){
-            return ref.current.getBoundingClientRect().height
-        }
-        return 0
+    useEffect(() => {
+        setHeight(() => {
+            console.log({ counter })
+            if(ref.current){
+                return ref.current.getBoundingClientRect().height
+            }
+            return 0
+        })
     }, [ ref, counter ])
 
     return [ ref, height ] as const
@@ -403,12 +420,19 @@ export default function Page(){
                 </div>
             </MenuTopPanel>
             <div>
-                <div className="pl-10">
+                <div className="pl-10 flex flex-col gap-2">
                     <MenuAccordion label="lorem ipsum">
                         <div>
                             <p>SOMETHING IS HAPPENING THERE</p>
                             <p>Something</p>
                             <p>Hello</p>
+                            <MenuAccordion label="lorem ipsum">
+                                <div>
+                                    <p>SOMETHING IS HAPPENING THERE</p>
+                                    <p>Something</p>
+                                    <p>Hello</p>
+                                </div>
+                            </MenuAccordion>
                         </div>
                     </MenuAccordion>
                     <MenuAccordion label="lorem ipsum">
