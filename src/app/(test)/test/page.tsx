@@ -1,6 +1,6 @@
 'use client'
 
-import { PropsWithChildren, useEffect, useRef, useState } from "react"
+import { PropsWithChildren, useEffect, useMemo, useRef, useState } from "react"
 import { IoHomeOutline as HomeIcon } from "react-icons/io5"
 import { MdOutlineBalance as BalanceIcon } from "react-icons/md"
 import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb";
@@ -290,9 +290,17 @@ function MenuButtonContainer({ children, size }: PropsWithChildren<{ size?: Menu
     </div>
 }
 
-function MenuAccordion(){
+function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: string; open?: boolean }>){
 
+    const childContainer = useRef<HTMLDivElement>(null)
     const [ hover, setHover ] = useState(false)
+
+    const childHeight = useMemo(() => {
+        if(childContainer.current){
+            return childContainer.current.getBoundingClientRect().height
+        }
+        return 0
+    }, [ childContainer ])
 
     return <div
         className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
@@ -301,12 +309,23 @@ function MenuAccordion(){
     >
         <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) cursor-pointer flex items-center justify-between">
             <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
-            <span>lorem ipsum</span>
+            <span>{ label }</span>
             {
                 hover
                     ? <MinusIcon size={30} />
                     : <PlusIcon size={30} />
             }
+            <div
+                className={[
+                    "absolute left-0 right-0 top-[calc(100%)] overflow-hidden h-0",
+                    "[transition:height_300ms_ease]",
+                ].join(" ")}
+                style={{ height: open || hover ? childHeight : undefined }}
+            >
+                <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 pl-3 pt-[5px]">
+                    { children }
+                </div>
+            </div>
         </div>
     </div>
 }
@@ -361,7 +380,13 @@ export default function Page(){
                 </div>
             </MenuTopPanel>
             <div>
-                <MenuAccordion />
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>SOMETHING IS HAPPENING THERE</p>
+                        <p>Something</p>
+                        <p>Hello</p>
+                    </div>
+                </MenuAccordion>
             </div>
         </div>
     </div>
