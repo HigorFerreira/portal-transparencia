@@ -334,31 +334,29 @@ function useHeightMeasure(){
     return [ ref, height ] as const
 }
 
-function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: string; open?: boolean }>){
+function MenuAccordion({ label, open: _open = true, children }: PropsWithChildren<{ label: string; open?: boolean }>){
 
-    const [ hover, setHover ] = useState(false)
+    const [ open, setOpen ] = useState(_open)
     const [ childContainer, childHeight ] = useHeightMeasure()
 
     return <>
         <div
             className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
-            onMouseEnter={setHover.bind(null, true)}
-            onMouseLeave={setHover.bind(null, false)}
         >
             <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) cursor-pointer flex items-center justify-between">
                 <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
                 <span>{ label }</span>
                 {
-                    hover
-                        ? <MinusIcon size={30} />
-                        : <PlusIcon size={30} />
+                    open
+                        ? <MinusIcon onClick={setOpen.bind(null, false)} title="Esconder" size={30} />
+                        : <PlusIcon onClick={setOpen.bind(null, true)} title="Expandir" size={30} />
                 }
                 <div
                     className={[
                         "absolute left-0 right-0 top-[calc(100%)] overflow-hidden h-0",
                         "[transition:height_300ms_ease]",
                     ].join(" ")}
-                    style={{ height: open || hover ? childHeight : undefined }}
+                    style={{ height: open ? childHeight : undefined }}
                 >
                     <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 pl-3 pt-[5px]">
                         { children }
@@ -366,7 +364,7 @@ function MenuAccordion({ label, open, children }: PropsWithChildren<{ label: str
                 </div>
             </div>
         </div>
-        <div className="[transition:height_300ms_ease]" style={{ height: open || hover ? childHeight : 0 }} />
+        <div className="[transition:height_300ms_ease]" style={{ height: open ? childHeight : 0 }} />
     </>
 }
 
