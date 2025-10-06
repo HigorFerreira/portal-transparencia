@@ -21,7 +21,7 @@ export default function MainMenu(){
     return <div className="w-full h-full grid grid-rows-[auto_1fr]">
         <MenuTopPanel>
             <div className="flex flex-col items-center px-4 pt-2">
-                <Search />
+                <Search placeholder="Filtrar menu" />
                 <div className="my-4">
                     <MenuButtonContainer>
                         <HomeIcon />
