@@ -3,12 +3,9 @@
 import { PropsWithChildren, ReactElement, useEffect, useMemo, useRef, useState, JSX } from "react"
 import { IoHomeOutline as HomeIcon } from "react-icons/io5"
 import { MdOutlineBalance as BalanceIcon } from "react-icons/md"
-import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb";
-import { CiSearch } from "react-icons/ci";
-
+import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb"
 import { FaRegSquarePlus as PlusIcon } from "react-icons/fa6"
 import { FaRegSquareMinus as MinusIcon } from "react-icons/fa6"
-
 
 import { Input } from 'antd'
 
