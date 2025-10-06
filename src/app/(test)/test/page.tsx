@@ -1,6 +1,6 @@
 'use client'
 
-import { PropsWithChildren, useEffect, useMemo, useRef, useState } from "react"
+import { PropsWithChildren, ReactElement, useEffect, useMemo, useRef, useState, JSX } from "react"
 import { IoHomeOutline as HomeIcon } from "react-icons/io5"
 import { MdOutlineBalance as BalanceIcon } from "react-icons/md"
 import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb";
@@ -334,7 +334,7 @@ function useHeightMeasure(){
     return [ ref, height ] as const
 }
 
-function MenuAccordion({ label, open: _open = true, children }: PropsWithChildren<{ label: string; open?: boolean }>){
+function MenuAccordion({ label, open: _open = true, children }: { label: string; open?: boolean; children?: ReactElement<JSX.IntrinsicElements['div']> }){
 
     const [ open, setOpen ] = useState(_open)
     const [ childContainer, childHeight ] = useHeightMeasure()
@@ -376,6 +376,12 @@ function MenuItemsContainer({ children }: PropsWithChildren){
             </div>
         </div>
     </div>
+}
+
+function MenuItem({ children, onClick }: PropsWithChildren<{ onClick?: JSX.IntrinsicElements['p']['onClick'] }>){
+    return <p onClick={onClick}>
+        { children }
+    </p>
 }
 
 export default function Page(){
@@ -430,81 +436,81 @@ export default function Page(){
             <MenuItemsContainer>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>SOMETHING IS HAPPENING THERE</p>
-                        <p>Something</p>
-                        <p>Hello</p>
+                        <MenuItem>SOMETHING IS HAPPENING THERE</MenuItem>
+                        <MenuItem>Something</MenuItem>
+                        <MenuItem>Hello</MenuItem>
                         <MenuAccordion label="lorem ipsum">
                             <div>
-                                <p>SOMETHING IS HAPPENING THERE</p>
-                                <p>Something</p>
-                                <p>Hello</p>
+                                <MenuItem>SOMETHING IS HAPPENING THERE</MenuItem>
+                                <MenuItem>Something</MenuItem>
+                                <MenuItem>Hello</MenuItem>
                             </div>
                         </MenuAccordion>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
                 <MenuAccordion label="lorem ipsum">
                     <div>
-                        <p>Omae ga</p>
+                        <MenuItem>Omae ga</MenuItem>
                     </div>
                 </MenuAccordion>
             </MenuItemsContainer>
