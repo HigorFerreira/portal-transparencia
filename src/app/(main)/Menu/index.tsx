@@ -1,9 +1,8 @@
 import { ClientContainer } from './client'
+import MainMenu from '@/components/MainMenu'
 
-export default async function SubMenu() {
+export default async function Menu() {
     return <ClientContainer>
-        <div className="p-6">
-            MENU
-        </div>
+        <MainMenu />
     </ClientContainer>
 }
