@@ -343,13 +343,13 @@ function MenuAccordion({ label, open: _open = true, children }: PropsWithChildre
         <div
             className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
         >
-            <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) cursor-pointer flex items-center justify-between">
+            <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) flex items-center justify-between">
                 <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
                 <span>{ label }</span>
                 {
                     open
-                        ? <MinusIcon onClick={setOpen.bind(null, false)} title="Esconder" size={30} />
-                        : <PlusIcon onClick={setOpen.bind(null, true)} title="Expandir" size={30} />
+                        ? <MinusIcon onClick={setOpen.bind(null, false)} className="cursor-pointer" title="Esconder" size={30} />
+                        : <PlusIcon  onClick={setOpen.bind(null, true)} className="cursor-pointer" title="Expandir" size={30} />
                 }
                 <div
                     className={[
@@ -366,6 +366,16 @@ function MenuAccordion({ label, open: _open = true, children }: PropsWithChildre
         </div>
         <div className="[transition:height_300ms_ease]" style={{ height: open ? childHeight : 0 }} />
     </>
+}
+
+function MenuItemsContainer({ children }: PropsWithChildren){
+    return <div className="h-full overflow-hidden">
+        <div className="h-full pl-10 overflow-auto">
+            <div className="flex flex-col gap-2 pb-8">
+                { children }
+            </div>
+        </div>
+    </div>
 }
 
 export default function Page(){
@@ -417,89 +427,87 @@ export default function Page(){
                     </div>
                 </div>
             </MenuTopPanel>
-            <div className="h-full overflow-hidden">
-                <div className="pl-10 overflow-auto flex flex-col gap-2">
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>SOMETHING IS HAPPENING THERE</p>
-                            <p>Something</p>
-                            <p>Hello</p>
-                            <MenuAccordion label="lorem ipsum">
-                                <div>
-                                    <p>SOMETHING IS HAPPENING THERE</p>
-                                    <p>Something</p>
-                                    <p>Hello</p>
-                                </div>
-                            </MenuAccordion>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <p>Omae ga</p>
-                        </div>
-                    </MenuAccordion>
-                </div>
-            </div>
+            <MenuItemsContainer>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>SOMETHING IS HAPPENING THERE</p>
+                        <p>Something</p>
+                        <p>Hello</p>
+                        <MenuAccordion label="lorem ipsum">
+                            <div>
+                                <p>SOMETHING IS HAPPENING THERE</p>
+                                <p>Something</p>
+                                <p>Hello</p>
+                            </div>
+                        </MenuAccordion>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+                <MenuAccordion label="lorem ipsum">
+                    <div>
+                        <p>Omae ga</p>
+                    </div>
+                </MenuAccordion>
+            </MenuItemsContainer>
         </div>
     </div>
 }
