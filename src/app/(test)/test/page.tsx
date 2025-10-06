@@ -419,8 +419,8 @@ export default function Page(){
                     </div>
                 </div>
             </MenuTopPanel>
-            <div>
-                <div className="pl-10 flex flex-col gap-2">
+            <div className="h-full overflow-hidden">
+                <div className="pl-10 overflow-auto flex flex-col gap-2">
                     <MenuAccordion label="lorem ipsum">
                         <div>
                             <p>SOMETHING IS HAPPENING THERE</p>
@@ -433,6 +433,66 @@ export default function Page(){
                                     <p>Hello</p>
                                 </div>
                             </MenuAccordion>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
+                        </div>
+                    </MenuAccordion>
+                    <MenuAccordion label="lorem ipsum">
+                        <div>
+                            <p>Omae ga</p>
                         </div>
                     </MenuAccordion>
                     <MenuAccordion label="lorem ipsum">
