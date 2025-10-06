@@ -16,7 +16,7 @@ import { Input } from 'antd'
 const { Search } = Input
 
 export default function MainMenu(){
-    return <div className="w-full h-full grid grid-rows-[auto_1fr] [--alt-color:#1F3B99] [--bg-color:#91bbf2] [--menu-item-bg:#e5e7eb]">
+    return <div className="w-full h-full grid grid-rows-[auto_1fr] [--alt-color:#1F3B99] [--bg-color:#91bbf2] [--menu-item-bg:#f3f4f6]">
         <MenuTopPanel>
             <div className="flex flex-col items-center px-4 pt-2">
                 <Search placeholder="Filtrar menu" />
