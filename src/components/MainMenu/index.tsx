@@ -5,10 +5,9 @@ import { MdOutlineBalance as BalanceIcon } from "react-icons/md"
 import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb"
 
 import InfoIcon from './icons/InfoIcon'
+import { renderMenuItems } from './utils'
 import BalcaoIcon from './icons/BalcaoIcon'
-import MenuItem from './components/MenuItem'
 import MenuTopPanel from './components/MenuTopPanel'
-import MenuAccordion from './components/MenuAccordion'
 import MenuButtonContainer from './components/MenuButtonContainer'
 import MenuItemsContainer from './components/MenuItemsContainer'
 
@@ -16,9 +15,8 @@ import { Input } from 'antd'
 
 const { Search } = Input
 
-
 export default function MainMenu(){
-    return <div className="w-full h-full grid grid-rows-[auto_1fr]">
+    return <div className="w-full h-full grid grid-rows-[auto_1fr] [--alt-color:#1F3B99] [--bg-color:#91bbf2] [--menu-item-bg:#e5e7eb]">
         <MenuTopPanel>
             <div className="flex flex-col items-center px-4 pt-2">
                 <Search placeholder="Filtrar menu" />
@@ -59,85 +57,34 @@ export default function MainMenu(){
             </div>
         </MenuTopPanel>
         <MenuItemsContainer>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>SOMETHING IS HAPPENING THERE</MenuItem>
-                    <MenuItem>Something</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                    <MenuAccordion label="lorem ipsum">
-                        <div>
-                            <MenuItem>SOMETHING IS HAPPENING THERE</MenuItem>
-                            <MenuItem>Something</MenuItem>
-                            <MenuItem>Hello</MenuItem>
-                        </div>
-                    </MenuAccordion>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
-            <MenuAccordion label="lorem ipsum">
-                <div>
-                    <MenuItem>Omae ga</MenuItem>
-                </div>
-            </MenuAccordion>
+            {
+                renderMenuItems([
+                    {
+                        label: 'Gestão',
+                        children: [
+                            { label: 'Acompanhamento de Processos e Procedimentos Administrativos' },
+                            { label: 'Atos Normativos' },
+                            { label: 'Competências / Regimento Interno' },
+                            { label: 'Estatísticas' },
+                            { label: 'Metas Nacionais CNJ' },
+                            { label: 'Estrutura Organizacional - Organograma e Mapa de Contatos' },
+                            { label: 'Planejamento Estratégico Institucional' },
+                            { label: 'Programas, Projetos e Ações' },
+                            { label: 'Relatório de Gestão da Prestação de Contas' },
+                            { label: 'Resultados do Planejamento Estratégico Institucional' },
+                        ]
+                    },
+                    {
+                        label: 'Atos Judiciais / Jurisprudência',
+                    },
+                    {
+                        label: 'Banco de Peritos',
+                    },
+                    {
+                        label: 'Banco de Projetos Sociais',
+                    },
+                ])
+            }
         </MenuItemsContainer>
     </div>
 }

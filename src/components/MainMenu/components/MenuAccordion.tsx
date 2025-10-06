@@ -9,9 +9,7 @@ export default function MenuAccordion({ label, open: _open = true, children }: {
     const [ childContainer, childHeight ] = useHeightMeasure()
 
     return <>
-        <div
-            className="[--alt-color:#1F3B99] [--bg-color:#91bbf2]"
-        >
+        <div>
             <div className="relative px-4 py-3 rounded-xl bg-(--bg-color) text-(--alt-color) flex items-center justify-between">
                 <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
                 <span>{ label }</span>
