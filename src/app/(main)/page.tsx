@@ -1,11 +1,11 @@
 import React from "react"
 
-import TopBar from '@/components/TopBar'
-import TopSecondBar from '@/components/TopSecondBar'
-import ContentTest from './ContentTest'
-
-import SubMenu from '@/app/(main)/SubMenu'
 import Menu from '@/app/(main)/Menu'
+import TopBar from '@/components/TopBar'
+import GlobalSearch from './GlobalSearch'
+import SubMenu from '@/app/(main)/SubMenu'
+import TopSecondBar from '@/components/TopSecondBar'
+
 
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
 						<h1 className="font-bold text-[clamp(1.5rem,calc(.7886vw+1.25rem),2.6rem)] mb-4 text-[#487eb0]">Portal da Transparência</h1>
 					</div>
 					<div>
-						<input className="w-full my-4" type="text" />
+						<GlobalSearch />
 					</div>
 					<div className="[&>*:not(:last-child)]:mb-2">
 						<p>
