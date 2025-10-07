@@ -31,6 +31,7 @@ export default function MainMenu(){
                     className={
                         [
                             "mt-[12px] [&>*]:pl-[30px] [&>*]:relative [&>*]:w-full [&>*]:flex [&>*]:justify-center [&>*>*:nth-child(1)]:absolute [&>*>*:nth-child(1)]:left-0",
+                            "[@media(min-width:1280px)_and_(max-height:800px)]:hidden",
                         ].join(" ")
                     }
                 >
@@ -59,12 +60,6 @@ export default function MainMenu(){
         <MenuItemsContainer>
             {
                 renderMenuItems([
-                    // {
-                    //     "label": "Transparência"
-                    // },
-                    // {
-                    //     "label": "Início"
-                    // },
                     {
                         "label": "Gestão",
                         "children": [

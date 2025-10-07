@@ -29,11 +29,11 @@ export default function Home() {
 		<aside className="[grid-area:sm]">
 			<SubMenu />
 		</aside>
-		<main className="[grid-area:c] overflow-hidden">
+		<main className="[grid-area:c] overflow-hidden [&_a]:text-blue-500">
 			<div className="w-full h-full flex justify-center items-center">
-				<div className="max-w-[920px] h-[calc(100%-10	0px)] gap-x-4 grid grid-rows-[repeat(3,auto)_1fr_auto] grid-cols-[1fr_auto]">
+			<div className="max-w-[920px] gap-x-4 grid grid-rows-[repeat(3,auto)_1fr_auto] grid-cols-[1fr_auto]">
 					<div>
-						<h1 className="font-bold text-[40px] mb-4 text-[#487eb0]">Portal da Transparência</h1>
+						<h1 className="font-bold text-[clamp(1.5rem,calc(.7886vw+1.25rem),2.6rem)] mb-4 text-[#487eb0]">Portal da Transparência</h1>
 					</div>
 					<div>
 						<input className="w-full my-4" type="text" />
@@ -59,8 +59,8 @@ export default function Home() {
 							Se a informação não for localizada, utilize <a target="_blank" href="https://www.tjgo.jus.br/index.php/sic/apresentacao-sic">a página do Serviço de Informação ao Cidadão - SIC</a> para ser direcionado a um <a target="_blank" href="https://tjgo.omd.com.br/ouvidoria/externo/cadastro.do">sistema específico</a>, que permite ao cidadão registrar um pedido formal de informação. Os pedidos poderão ser acompanhados mediante a utilização de código de acesso gerado pelo sistema.
 						</p>
 					</div>
-					<div className="row-start-5">
-						<h3>Dúvidas e Alterações:</h3>
+					<div className="row-start-5 mt-8">
+						<h3 className="font-bold text-[clamp(1rem,calc(.3943vw+.625rem),2.1rem)]">Dúvidas e Alterações:</h3>
 						<p>Diretoria de Planejamento e Inovação</p>
 						<p>Ana Flávia Antunes - (62) 3236-5434</p>
 					</div>
