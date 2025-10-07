@@ -31,7 +31,16 @@ export default function Home() {
 		</aside>
 		<main className="[grid-area:c] overflow-hidden [&_a]:text-blue-500">
 			<div className="w-full h-full flex justify-center items-center">
-			<div className="max-w-[920px] gap-x-4 grid grid-rows-[repeat(3,auto)_1fr_auto] grid-cols-[1fr_auto]">
+			<div
+				className={[
+					// "@container/content1",
+					"max-w-[920px] gap-x-4 grid grid-rows-[repeat(3,auto)_1fr_auto] grid-cols-[1fr_auto]",
+					"[@media(max-width:1570px)]:grid-cols-[1fr]",
+					"[@media(max-width:1570px)]:grid-rows-[repeat(4,auto)]",
+					"[@media(max-width:1570px)]:text-center",
+					"[@media(max-width:1570px)]:px-6",
+				].join(" ")}
+			>
 					<div>
 						<h1 className="font-bold text-[clamp(1.5rem,calc(.7886vw+1.25rem),2.6rem)] mb-4 text-[#487eb0]">Portal da Transparência</h1>
 					</div>
@@ -66,6 +75,8 @@ export default function Home() {
 					</div>
 					<div className={[
 						"col-start-2 [grid-row:1/-1]",
+						"[@media(max-width:1570px)]:[grid-column:unset]",
+						"[@media(max-width:1570px)]:[grid-row:unset]",
 						"bg-[url(https://i.pinimg.com/564x/38/fc/ed/38fced154ea08cf9e1dc7314b85cb7be.jpg)]",
 						"rounded-3xl shadow-2xl bg-cover",
 						"min-w-[380px]"
