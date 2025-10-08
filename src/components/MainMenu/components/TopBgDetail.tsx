@@ -6,13 +6,22 @@ export default function TopBgDetail(){
         viewBox="0 0 105.833 115.039"
         className={[
             "w-full aspect-[400/434.794]",
-            '[--color-blue-1:#162556]',
-            '[--color-blue-2:#2E4DB3]',
-            '[--color-blue-3:#223985]',
+            '[--color-stop-1:#162556]',
+            '[--color-stop-2:#2E4DB3]',
+            '[--color-stop-3:#223985]',
             '[--color-blue-4:#4F64A6]',
             '[--color-blue-5:#747DBD]',
             '[--color-blue-6:#606fb0]',
             '[--color-blue-7:#9A97D4]',
+
+            // '[--color-stop-1:#162556]',
+            // '[--color-stop-3:#162556]',
+            // '[--color-stop-2:#5a6fa7]',
+
+            // '[--color-blue-4:#5a6fa7]',
+            // '[--color-blue-5:#5a6fa7]',
+            // '[--color-blue-6:black]',
+            // '[--color-blue-7:black]',
         ].join(" ")}
     >
         <defs id="defs1">
@@ -41,14 +50,14 @@ export default function TopBgDetail(){
             y2="-359.09"
             gradientUnits="userSpaceOnUse"
         >
-            <stop id="stop9" offset="0" stopColor="var(--color-blue-2)" stopOpacity="1"></stop>
+            <stop id="stop9" offset="0" stopColor="var(--color-stop-2)" stopOpacity="1"></stop>
             <stop
             id="stop10"
             offset="0.478"
-            stopColor="var(--color-blue-3)"
+            stopColor="var(--color-stop-3)"
             stopOpacity="1"
             ></stop>
-            <stop id="stop11" offset="1" stopColor="var(--color-blue-1)" stopOpacity="1"></stop>
+            <stop id="stop11" offset="1" stopColor="var(--color-stop-1)" stopOpacity="1"></stop>
         </linearGradient>
         <clipPath id="id4" clipRule="nonzero">
             <path
