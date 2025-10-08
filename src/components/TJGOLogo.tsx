@@ -3,6 +3,8 @@ import * as React from "react";
 const SvgIcon = (props: React.SVGProps<SVGSVGElement>) => {
     return <div
         className={[
+            '[--text-logo-color:#fff]',
+            'dark:[--text-logo-color:#fff]',
             '[&_.st0]:[fill:#007378]',
             '[&_.st1]:[fill:#fd0]',
             '[&_.st2]:[fill:var(--text-logo-color)]',
