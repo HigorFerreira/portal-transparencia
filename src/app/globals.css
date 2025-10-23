@@ -7,17 +7,20 @@
 	--hard-surface-color: #1f2b54ff;
 	--white-hole-color: #fff;
 	--black-hole-color: #000;
+	--soft-surface-color: #f0f1f2ff;
 }
 .dark {
 	--primary-color: #58abe3ff;
 	--hard-surface-color: #1f2b54ff;
 	--white-hole-color: #000;
 	--black-hole-color: #fff;
+	--soft-surface-color: #f0f1f2ff;
 }
 
 @theme {
 	--color-primary: var(--primary-color);
 	--color-hard-surface: var(--hard-surface-color);
+	--color-soft-surface: var(--soft-surface-color);
 	--color-white-hole: var(--white-hole-color);
 	--color-black-hole: var(--black-hole-color);
 }
