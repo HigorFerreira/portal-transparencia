@@ -18,41 +18,41 @@ const { Search } = Input
 export default function MainMenu(){
     return <div className="w-full h-full grid grid-rows-[auto_1fr] bg-hard-surface text-soft-surface">
         <MenuTopPanel>
-            <div className="flex flex-col items-center px-4 pt-2">
-                <Search placeholder="Filtrar menu" />
+            <div className="flex flex-col items-center px-6 pt-2 text-primary">
+                <Search placeholder="Pesquisar no menu" />
                 <div className="my-4">
                     <MenuButtonContainer>
                         <HomeIcon />
-                        <span>Início</span>
+                        <span className="text-white-hole">Início</span>
                     </MenuButtonContainer>
                 </div>
 
                 <div
                     className={
                         [
-                            "mt-[12px] [&>*]:pl-[30px] [&>*]:relative [&>*]:w-full [&>*]:flex [&>*]:justify-center [&>*>*:nth-child(1)]:absolute [&>*>*:nth-child(1)]:left-0",
+                            "mt-[12px] [&>*]:pl-[30px] [&>*]:relative [&>*]:w-full [&>*]:flex [&>*>*:nth-child(1)]:absolute [&>*>*:nth-child(1)]:left-0",
                             "[@media(min-width:1280px)_and_(max-height:800px)]:hidden",
                         ].join(" ")
                     }
                 >
                     <MenuButtonContainer>
                         <BalanceIcon />
-                        <span>Projudi</span>
+                        <span className="text-white-hole">Projudi</span>
                     </MenuButtonContainer>
-                    <hr />
+                    <hr className="text-white-hole" />
                     <MenuButtonContainer>
                         <BalcaoIcon />
-                        <span>Balcão Virtual</span>
+                        <span className="text-white-hole">Balcão Virtual</span>
                     </MenuButtonContainer>
-                    <hr />
+                    <hr className="text-white-hole" />
                     <MenuButtonContainer>
                         <AtendimentoIcon />
-                        <span className="text-[1.2rem]">1º Atendimento / Juizados especiais</span>
+                        <span className="text-white-hole text-[1.2rem]">1º Atendimento / Juizados especiais</span>
                     </MenuButtonContainer>
-                    <hr />
+                    <hr className="text-white-hole" />
                     <MenuButtonContainer>
                         <InfoIcon />
-                        <span className="text-[1.2rem]">Serviço de Informação ao Cidadão</span>
+                        <span className="text-white-hole text-[1.2rem]">Serviço de Informação ao Cidadão</span>
                     </MenuButtonContainer>
                 </div>
             </div>

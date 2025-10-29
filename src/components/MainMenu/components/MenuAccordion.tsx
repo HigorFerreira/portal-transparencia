@@ -11,7 +11,7 @@ export default function MenuAccordion({ label, open: _open = true, children }: {
     return <>
         <div>
             <div className="relative px-4 py-3 rounded-xl bg-primary flex items-center justify-between">
-                <div className="absolute rounded-xl bg-(--alt-color) w-[10px] top-[8px] left-0 bottom-[8px]" />
+                <div className="absolute rounded-xl bg-white-hole w-[10px] top-[8px] left-0 bottom-[8px]" />
                 <span>{ label }</span>
                 {
                     open
@@ -25,7 +25,7 @@ export default function MenuAccordion({ label, open: _open = true, children }: {
                     ].join(" ")}
                     style={{ height: open ? childHeight : undefined }}
                 >
-                    <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 pl-3 pt-[5px]">
+                    <div ref={childContainer} className="absolute bottom-0 left-0 right-0 ml-2 border-l-2 border-primary pl-3 pt-[5px]">
                         { children }
                     </div>
                 </div>
