@@ -20,7 +20,7 @@ export default function MainMenu(){
         <MenuTopPanel>
             <div className="flex flex-col items-center px-6 pt-2 text-primary">
                 <Search placeholder="Pesquisar no menu" />
-                <div className="my-4">
+                <div className="w-full px-[12px] my-4">
                     <MenuButtonContainer>
                         <HomeIcon />
                         <span className="text-white-hole">Início</span>
