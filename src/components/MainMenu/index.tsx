@@ -1,10 +1,10 @@
 'use client';
 
-import { IoHomeOutline as HomeIcon } from "react-icons/io5"
 import { MdOutlineBalance as BalanceIcon } from "react-icons/md"
 import { TbCertificate2 as AtendimentoIcon } from "react-icons/tb"
+import { IoHomeOutline as HomeIcon, IoInformationCircleOutline as InfoIcon } from "react-icons/io5"
 
-import InfoIcon from './icons/InfoIcon'
+// import InfoIcon from './icons/InfoIcon'
 import { renderMenuItems } from './utils'
 import BalcaoIcon from './icons/BalcaoIcon'
 import MenuTopPanel from './components/MenuTopPanel'

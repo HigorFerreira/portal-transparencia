@@ -10,7 +10,7 @@ export default function MenuAccordion({ label, open: _open = true, children }: {
 
     return <>
         <div>
-            <div className="relative px-4 py-3 rounded-xl bg-primary flex items-center justify-between">
+            <div className="@container relative px-4 py-3 bg-primary flex items-center justify-between [border-radius:var(--radius-xl)_50cqh_50cqh_var(--radius-xl)]">
                 <div className="absolute rounded-xl bg-white-hole w-[10px] top-[8px] left-0 bottom-[8px]" />
                 <span>{ label }</span>
                 {
