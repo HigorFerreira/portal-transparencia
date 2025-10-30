@@ -149,5 +149,11 @@ export default function TopSecondBar(){
                 <h1>Portal da Transparência</h1>
             </div>
         </div>
+        <div className='absolute z-30 w-full h-[83.023801px]'>
+            <div className='w-full h-full flex items-center justify-end'>
+                {/* eslint-disable @next/next/no-img-element */}
+                <img className='h-[48px] mr-[25px] aspect-[646.5/166.5]' src="/logo-brasao-DPI.svg" alt="Logo DPI" />
+            </div>
+        </div>
     </div>
 }
