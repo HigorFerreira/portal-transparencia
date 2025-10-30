@@ -89,13 +89,35 @@ export default function TopSecondBar(){
                 context.fillStyle = primary
                 context.beginPath()
                 context.moveTo(0, 0)
-                context.lineTo(0, 83.025392)
-                context.lineTo(0.675306278035*width, 83.025392)
-                context.bezierCurveTo(0.685475926908*width, 83.025392, 0.694675802003*width, 77.133702, 0.701315823158*width, 67.623052)
-                context.bezierCurveTo(0.707893011918*width, 58.2031, 0.711957284662*width, 45.2328, 0.711957284662*width, 30.9102)
-                context.bezierCurveTo(0.711957284662*width, 19.3382, 0.709300586970*width, 8.6493, 0.704811664573*width, 0)
+                context.lineTo(0, 83.024366)
+                context.lineTo(960.20314, 83.024366)
+                context.bezierCurveTo(974.66314,83.024366, 987.74424,77.132676, 997.18554,67.622026)
+                context.bezierCurveTo(1006.5375,58.202044, 1012.3164,45.231764, 1012.3164,30.909134)
+                context.bezierCurveTo(1012.3164,19.337154, 1008.5389,8.648284, 1002.1562,0)
                 // 960.20314 + 0b0000, 83.025392 + 0b0000,
                 context.fill()
+                
+
+
+
+                context.fillStyle = primaryLight
+                context.beginPath()
+                context.moveTo(139.32637, 144.653)
+                context.bezierCurveTo(174.11697, 144.653, 202.5329, 117.36506, 204.34223, 83.0238)
+                context.lineTo(0, 83.0238)
+                context.lineTo(0, 144.653)
+                context.fill()
+
+                context.beginPath()
+                context.moveTo(997.18454, 67.622499)
+                context.lineTo(895.29807, 83.023801)
+                context.bezierCurveTo(894.40655, 93.374498, 901.99279, 102.24109, 912.48662, 102.24109)
+                context.lineTo(1094.8156, 102.24109)
+                context.bezierCurveTo(1117.4463,102.24109, 1117.4462, 67.622499, 1094.8156, 67.622499)
+                context.fill()
+
+
+
 
                 context.fillStyle = primaryDark
                 context.beginPath()
@@ -106,12 +128,12 @@ export default function TopSecondBar(){
                 context.bezierCurveTo(204.4369, 43.581219, 175.2863, 14.430614, 139.32637, 14.430614)
                 context.fill()
 
-                context.fillStyle = primaryLight
+                // SOME
                 context.beginPath()
-                context.moveTo(139.32637, 144.653)
-                context.bezierCurveTo(174.11697, 144.653, 202.5329, 117.36506, 204.34223, 83.0238)
-                context.lineTo(0, 83.0238)
-                context.lineTo(0, 144.653)
+                context.moveTo(912.4967, 67.622499)
+                context.bezierCurveTo(903.5820600000001, 67.622499, 896.24874, 74.363819, 895.29807, 83.023801)
+                context.lineTo(960.20194, 83.023801)
+                context.bezierCurveTo(974.6618900000001, 83.023801, 987.7432200000001, 77.13314500000001, 997.1845400000001, 67.622499)
                 context.fill()
             }}
         />
