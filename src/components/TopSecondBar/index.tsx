@@ -90,11 +90,11 @@ export default function TopSecondBar(){
                 context.beginPath()
                 context.moveTo(0, 0)
                 context.lineTo(0, 83.024366)
-                context.lineTo(960.20314, 83.024366)
-                context.bezierCurveTo(974.66314,83.024366, 987.74424,77.132676, 997.18554,67.622026)
-                context.bezierCurveTo(1006.5375,58.202044, 1012.3164,45.231764, 1012.3164,30.909134)
-                context.bezierCurveTo(1012.3164,19.337154, 1008.5389,8.648284, 1002.1562,0)
-                // 960.20314 + 0b0000, 83.025392 + 0b0000,
+                context.lineTo(0.6753062780351057*width, 83.024366)
+                context.bezierCurveTo(0.6854759269079345*width, 83.024366, 0.6946758020027035*width, 77.132676, 0.7013158231578237*width, 67.622026)
+                context.bezierCurveTo(0.7078930119180409*width, 58.202044, 0.7119572846615533*width, 45.231764, 0.7119572846615533*width, 30.909134)
+                context.bezierCurveTo(0.7119572846615533*width, 19.337154, 0.7093005869701902*width, 8.648284, 0.7048116645731912*width, 0)
+
                 context.fill()
                 
 
@@ -109,11 +109,11 @@ export default function TopSecondBar(){
                 context.fill()
 
                 context.beginPath()
-                context.moveTo(997.18454, 67.622499)
-                context.lineTo(895.29807, 83.023801)
-                context.bezierCurveTo(894.40655, 93.374498, 901.99279, 102.24109, 912.48662, 102.24109)
-                context.lineTo(1094.8156, 102.24109)
-                context.bezierCurveTo(1117.4463,102.24109, 1117.4462, 67.622499, 1094.8156, 67.622499)
+                context.moveTo(0.7013151198626043*width, 67.622499)
+                context.lineTo(0.6296588525879155*width, 83.023801)
+                context.bezierCurveTo(0.6290318508338972*width, 93.374498, 0.6343672171592781*width, 102.24109, 0.6417474776316956*width, 102.24109)
+                context.lineTo(0.7699785776276165*width, 102.24109)
+                context.bezierCurveTo(0.785894640749769*width, 102.24109, 0.7858945704202471*width, 67.622499, 0.7699785776276165*width, 67.622499)
                 context.fill()
 
 
@@ -128,12 +128,12 @@ export default function TopSecondBar(){
                 context.bezierCurveTo(204.4369, 43.581219, 175.2863, 14.430614, 139.32637, 14.430614)
                 context.fill()
 
-                // SOME
+
                 context.beginPath()
-                context.moveTo(912.4967, 67.622499)
-                context.bezierCurveTo(903.5820600000001, 67.622499, 896.24874, 74.363819, 895.29807, 83.023801)
-                context.lineTo(960.20194, 83.023801)
-                context.bezierCurveTo(974.6618900000001, 83.023801, 987.7432200000001, 77.13314500000001, 997.1845400000001, 67.622499)
+                context.moveTo(0.6417545668475073*width, 67.622499)
+                context.bezierCurveTo(0.6354849431526475*width, 67.622499, 0.6303274542541625*width, 74.363819, 0.6296588525879155*width, 83.023801)
+                context.lineTo(0.6753054340808424*width, 83.023801)
+                context.bezierCurveTo(0.6854750477889102*width, 83.023801, 0.6946750846415798*width, 77.13314500000001, 0.7013151198626043*width, 67.622499)
                 context.fill()
             }}
         />
