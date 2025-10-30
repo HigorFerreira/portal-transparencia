@@ -33,7 +33,7 @@ export default function useHeightMeasure(){
 
     useEffect(() => {
         setHeight(() => {
-            console.log({ counter })
+            // console.log({ counter })
             if(ref.current){
                 return ref.current.getBoundingClientRect().height
             }
