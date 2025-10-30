@@ -85,10 +85,10 @@ export default function TopSecondBar(){
                 context.beginPath()
                 context.moveTo(0, 0)
                 context.lineTo(0, 83.025392)
-                context.lineTo(0.67531*width, 83.025392)
-                context.bezierCurveTo(0.68548*width, 83.025392, 0.69468*width, 77.133702, 0.70132*width, 67.623052)
-                context.bezierCurveTo(0.70789*width, 58.2031, 0.71196*width, 45.2328, 0.71196*width, 30.9102)
-                context.bezierCurveTo(0.71196*width, 19.3382, 0.70930*width, 8.6493, 0.70481*width, 0)
+                context.lineTo(0.675306278035*width, 83.025392)
+                context.bezierCurveTo(0.685475926908*width, 83.025392, 0.694675802003*width, 77.133702, 0.701315823158*width, 67.623052)
+                context.bezierCurveTo(0.707893011918*width, 58.2031, 0.711957284662*width, 45.2328, 0.711957284662*width, 30.9102)
+                context.bezierCurveTo(0.711957284662*width, 19.3382, 0.709300586970*width, 8.6493, 0.704811664573*width, 0)
                 // 960.20314 + 0b0000, 83.025392 + 0b0000,
                 context.fill()
             }}
