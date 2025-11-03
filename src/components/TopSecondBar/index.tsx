@@ -145,8 +145,13 @@ export default function TopSecondBar(){
             <HeaderDecal container={container} />
         </div>
         <div className='absolute z-20 w-full h-[83.023801px]'>
-            <div className='w-full h-full flex justify-center items-center'>
-                <h1 className='font-[Helvetica,Arial,sans-serif]'>Portal da Transparência</h1>
+            <div className='w-full h-full flex justify-center items-center font-light'>
+                <h1 className={[
+                    'font-[Helvetica,Arial,sans-serif]',
+                    'text-[clamp(14pt,calc(0.66665625rem+0.5581632653vw),18.8pt)]'
+                ].join(' ')}>
+                    Portal da Transparência
+                </h1>
             </div>
         </div>
         <div className='absolute z-30 w-full h-[83.023801px]'>
