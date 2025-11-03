@@ -86,7 +86,7 @@ export default function Home() {
 								"col-start-2 [grid-row:1/-1]",
 								"[@media(max-width:1570px)]:[grid-column:unset]",
 								"[@media(max-width:1570px)]:[grid-row:unset]",
-								"bg-[url(https://i.pinimg.com/564x/38/fc/ed/38fced154ea08cf9e1dc7314b85cb7be.jpg)]",
+								"[background-image:url('/tjgo-faxada.jpg')]",
 								"rounded-3xl shadow-2xl bg-cover",
 								"min-w-[380px]"
 							].join(" ")}
