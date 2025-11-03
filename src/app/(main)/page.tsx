@@ -43,7 +43,14 @@ export default function Home() {
 						].join(" ")}
 					>
 						<div>
-							<h1 className="font-bold text-[clamp(1.5rem,calc(.7886vw+1.25rem),2.6rem)] mb-4 text-[#487eb0]">Apresentação</h1>
+							<h1 className={[
+								"font-bold mb-4 text-primary relative pl-4",
+								"text-[clamp(1.5rem,calc(.7886vw+1.25rem),2.6rem)]",
+								"before:content-[''] before:absolute before:left-0 before:top-[0%]",
+								"before:w-2 before:h-[100%] before:bg-primary before:rounded-full",
+							].join(" ")}>
+								Apresentação
+							</h1>
 						</div>
 						<div>
 							<GlobalSearch />

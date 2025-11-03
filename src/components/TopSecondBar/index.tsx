@@ -138,7 +138,7 @@ export default function TopSecondBar(){
         ref={container}
         className={[
             'relative w-full h-[144.653px]',
-            'uppercase text-white-hole font-bold'
+            'uppercase text-white-hole'
         ].join(' ')}
     >
         <div className='absolute z-10'>
@@ -146,7 +146,7 @@ export default function TopSecondBar(){
         </div>
         <div className='absolute z-20 w-full h-[83.023801px]'>
             <div className='w-full h-full flex justify-center items-center'>
-                <h1>Portal da Transparência</h1>
+                <h1 className='font-[Helvetica,Arial,sans-serif]'>Portal da Transparência</h1>
             </div>
         </div>
         <div className='absolute z-30 w-full h-[83.023801px]'>
